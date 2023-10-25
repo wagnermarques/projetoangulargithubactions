@@ -1,0 +1,17 @@
+# Workflow simples
+# pra gente conhecer github actions
+name: Deploy da nossa pasta dist
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: mostrando em que pasta estamos no ubuntu
+        run: echo $(pwd)
+      - name: olhando quais arquivos tenho dentro dessa pasta
+        run: ls -la
+      
